@@ -1,7 +1,14 @@
 export default {
   pages: [
     'pages/index/index',
-    'pages/index2/index',
+  ],
+  subpackages: [
+    {
+      root: 'pkgs',
+      pages: [
+        'index2/index',
+      ]
+    },
   ],
   window: {
     backgroundTextStyle: 'light',
