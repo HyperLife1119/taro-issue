@@ -9,7 +9,17 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: [
+    ['@tarojs/plugin-framework-vue3', {
+      mini: {
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('van-'),
+          whitespace: 'preserve'
+          // ...
+        }
+      }
+    }]
+  ],
   defineConstants: {
   },
   copy: {

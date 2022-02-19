@@ -1,33 +1,26 @@
 <template>
-  <view class="index">
-    <van-field :readonly="true" :value="msg" label="姓名" maxlength="30" />
-    <van-button class="my-cls" type="primary">按钮</van-button>
-    <van-datetime-picker type="datetime" :filter="filter" />
-  </view>
+  <list-view :loading="true"></list-view>
+
+  <!-- 把下面这行注释打开，属性即可绑定成功 -->
+  <!-- <van-loading v-if="false" type="spinner" size="85rpx" text-size="30rpx" :vertical="true"></van-loading> -->
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { listView } from 'sun-mini-core/components/list-view';
 
 export default {
+  components: {
+    listView
+  },
+
   setup() {
-    const msg = ref('Hello world')
-    const filter = (type: string, options: number[]) => {
-      if (type === 'minute') {
-        return options.filter(option => option % 5 === 0);
-      }
-      return options;
-    };
-    return {
-      msg,
-      filter
-    }
+    return {}
   }
 }
 </script>
 
 <style>
-.my-cls button {
-  font-size: 50px;
+page  {
+ padding: 30rpx;
 }
 </style>

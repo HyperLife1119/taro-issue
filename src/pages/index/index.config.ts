@@ -1,7 +1,7 @@
 export default {
-  navigationBarTitleText: '首页', usingComponents: {
-    'van-button': '/components/vant/button',
-    'van-field': '/components/vant/field',
-    'van-datetime-picker': '/components/vant/datetime-picker',
+  navigationBarTitleText: '首页',
+  usingComponents: {
+    'van-loading': '/components/vant/loading',
+    'van-empty': '/components/vant/empty',
   }
 }
