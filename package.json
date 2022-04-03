@@ -39,8 +39,6 @@
     "@tarojs/components": "3.4.2",
     "@tarojs/runtime": "3.4.2",
     "@tarojs/taro": "3.4.2",
-    "acorn-walk": "^8.2.0",
-    "sun-mini-core": "^1.0.9",
     "vue": "^3.0.0"
   },
   "devDependencies": {
