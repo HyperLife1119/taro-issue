@@ -1,7 +1,7 @@
-export default {
+export default definePageConfig({
   navigationBarTitleText: '首页',
+  enableShareAppMessage: true,
   usingComponents: {
-    'van-loading': '/components/vant/loading',
-    'van-empty': '/components/vant/empty',
+    'van-button': '/vant/button'
   }
-}
+})

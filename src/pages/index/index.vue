@@ -1,21 +1,19 @@
 <template>
-  <van-loading style="display: none;"></van-loading>
-
-  <van-empty image="https://source.unsplash.com/random" />
-  <van-empty />
+  <view class="index">
+    <van-button type="primary" open-type="share" :dataset="999">分享</van-button>
+  </view>
 </template>
 
-<script lang="ts">
+<script setup>
+import { useShareAppMessage } from '@tarojs/taro';
+import './index.scss';
 
-export default {
-  setup() {
-    return {}
+useShareAppMessage((event) => {
+  console.log(event.target);
+
+  return {
+    title: 'title',
+    path: 'path',
   }
-}
+})
 </script>
-
-<style>
-page {
-  padding: 30rpx;
-}
-</style>
